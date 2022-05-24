@@ -1,0 +1,36 @@
+.content--container {
+  padding: 4rem 2rem;
+  max-width: 1024px;
+  margin: auto;
+}
+
+.content--headline {
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.search--container {
+  padding: 0 0.5rem;
+  margin-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.cards--container {
+  margin-top: 1.75rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 0 0.5rem;
+}
+
+@media (min-width: 380px) {
+  .search--container {
+    flex-direction: row;
+  }
+}
