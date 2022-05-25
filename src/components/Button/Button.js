@@ -3,8 +3,8 @@ import './Button.scss';
 
 function Button(props) {
   return (
-    <button onClick={props.handleApi} className="search--button">
-      {props.cta}
+    <button onClick={props.handleButton} className="search--button">
+      {props.value}
     </button>
   );
 }

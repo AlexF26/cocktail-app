@@ -1,14 +1,13 @@
 import React from 'react';
 import './Cards.scss';
-import PlaceholderImage from './Assets/placeholder-image.png';
 
 function Cards(props) {
   return (
-    <a href="" className="card">
-      <img className="card--image" src={props.apiData.strDrinkThumb} alt="placeholder image" />
+    <a href="/" className="card">
+      <img className="card--image" src={props.data.strDrinkThumb} alt={props.data.strDrink} />
       <div className="card--copy">
-        <h3 className="card--title">{props.apiData.strDrink}</h3>
-        <p className="card--instructions">{props.apiData.strInstructions}</p>
+        <h3 className="card--title">{props.data.strDrink}</h3>
+        <p className="card--instructions">{props.data.strInstructions}</p>
       </div>
     </a>
   );
