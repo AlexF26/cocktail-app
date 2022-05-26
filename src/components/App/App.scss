@@ -13,9 +13,8 @@
 
 .search--container {
   margin-top: 1.75rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 0.75rem;
   width: 100%;
 }
@@ -23,12 +22,9 @@
 .cards--container {
   margin-top: 1.75rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 1rem;
 }
 
-@media (min-width: 380px) {
-  .search--container {
-    flex-direction: row;
-  }
-}
+// @media (min-width: 380px) {
+// }
