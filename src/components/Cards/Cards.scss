@@ -1,6 +1,8 @@
 @import '../../styles/variables/colors.scss';
 
 .card {
+  display: flex;
+  align-items: flex-end;
   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.15);
   border-radius: 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -8,32 +10,66 @@
   transition: box-shadow 200ms ease-in-out;
   overflow: hidden;
   background-color: $Bright;
+  position: relative;
+  min-height: 300px;
 
   &:hover {
     box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
   }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0) 40%);
+    z-index: unset;
+  }
 }
 
 .card--image {
-  height: 200px;
+  position: absolute;
+  height: 100%;
   width: 100%;
   object-fit: cover;
+  object-position: center;
+  z-index: unset;
 }
 
 .card--copy {
   padding: 1rem;
+  z-index: 3;
+  width: 100%;
 }
 
 .card--title {
-  font-size: 1.1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.025rem;
+  color: $Bright;
+  text-transform: uppercase;
 }
 
-.card--instructions {
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  font-weight: 300;
-  display: -webkit-box;
-  -webkit-line-clamp: 8;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-}
+// .list--container {
+//   margin-top: 0.5rem;
+// }
+
+// .desc--title {
+//   font-size: 0.9rem;
+//   color: $Description;
+// }
+
+// .ingredients--list {
+//   font-size: 0.9rem;
+//   margin-top: 0.5rem;
+//   list-style: disc outside;
+//   padding-left: 1rem;
+// }
+
+// .list-item {
+//   margin-top: 0.15rem;
+
+//   &:first-child {
+//     margin-top: 0;
+//   }
+// }

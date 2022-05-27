@@ -24,6 +24,11 @@ let ButtonCategories = [
     name: 'Beer',
     on: false,
   },
+  {
+    id: 6,
+    name: 'Wine',
+    on: false,
+  },
 ];
 
 export default ButtonCategories;
