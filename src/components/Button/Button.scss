@@ -1,17 +1,36 @@
+@import '../../styles/variables/colors.scss';
+
 .search--button {
   display: flex;
   padding: 0.5rem 0.5rem;
   width: 100%;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  border: 2px solid $Bright;
   border-radius: 1rem;
   text-align: center;
   cursor: pointer;
   font-weight: 600;
   font-family: 'roboto', sans-serif;
+  color: $Bright;
+  transition: border 200ms ease-in-out, box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
+  line-height: 1;
 
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.02);
+  &:hover,
+  &:focus-visible {
+    border: 2px solid $Primary;
+    outline: none;
+    transform: translateY(-0.05rem);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+  }
+
+  &.selected {
+    background-color: $Primary;
+    color: $Bright;
+    border: 2px solid $Primary;
+    transform: translateY(-0.05rem);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
   }
 }

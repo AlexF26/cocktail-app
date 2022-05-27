@@ -1,14 +1,36 @@
+@import '../../styles/variables/colors.scss';
+
+body {
+  background-color: rgb(248, 251, 253);
+}
+
 .content--container {
-  padding: 4rem 2rem;
+  padding: 0 2rem 2rem;
   max-width: 1024px;
+  margin: auto;
+  width: 100%;
+}
+
+.hero--container {
+  padding: 6rem 0;
+  background-image: url('../../assets/hero-image.png');
+  background-size: cover;
+  background-position: 50% 0%;
+}
+
+.hero--content {
+  max-width: 1024px;
+  padding: 0 2rem;
   margin: auto;
 }
 
 .content--headline {
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
   text-transform: uppercase;
+  color: $Bright;
+  text-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .search--container {
@@ -25,6 +47,3 @@
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 1rem;
 }
-
-// @media (min-width: 380px) {
-// }
