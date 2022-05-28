@@ -21,5 +21,4 @@ This simple cocktail app is a personal project that takes my love of drinks and 
 Website is built using **node** and **npx create-react-app**
 
 _After cloning the repository_
-`npm install`
-`npm start`
+`npm install` then `npm start`
