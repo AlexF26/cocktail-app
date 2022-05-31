@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../../components/Button/Button';
 import Cards from '../../components/Cards/Cards';
 import ButtonCategories from '../../App/ButtonCategories';
-import '../../App/App.scss';
+import './Home.scss';
 
 function Home() {
   // set initial state for card layout from cocktail api

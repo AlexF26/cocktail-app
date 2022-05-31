@@ -1,11 +1,11 @@
-@import '../../styles/variables/colors.scss';
+@import '../../styles/variables/variables.scss';
 
 .card {
   display: flex;
   align-items: flex-end;
-  box-shadow: 2px 3px 5px -1px rgba(0, 0, 0, 0.15);
-  border-radius: 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.25);
+  box-shadow: $bs-md;
+  border-radius: $br-md;
+  outline: $b-md;
   text-decoration: none;
   transition: box-shadow 200ms ease-in-out;
   overflow: hidden;
@@ -14,7 +14,7 @@
   min-height: 300px;
 
   &:hover {
-    box-shadow: 2px 4px 5px -1px rgba(0, 0, 0, 0.35);
+    box-shadow: $bs-hover;
     cursor: pointer;
   }
 
@@ -38,13 +38,13 @@
 }
 
 .card--title--container {
-  padding: 1rem;
+  padding: $s-md;
   z-index: 3;
   width: 100%;
 }
 
 .card--title {
-  font-size: 0.85rem;
+  font-size: $f-sm;
   font-weight: 500;
   line-height: 1.4;
   letter-spacing: 0.025rem;

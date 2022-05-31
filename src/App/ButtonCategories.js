@@ -1,17 +1,17 @@
 let ButtonCategories = [
   {
     id: 1,
-    name: 'Tequila',
+    name: 'Rum',
     on: true,
   },
   {
     id: 2,
-    name: 'Whiskey',
+    name: 'Gin',
     on: false,
   },
   {
     id: 3,
-    name: 'Rum',
+    name: 'Tequila',
     on: false,
   },
   {
@@ -31,7 +31,7 @@ let ButtonCategories = [
   },
   {
     id: 7,
-    name: 'Gin',
+    name: 'Whiskey',
     on: false,
   },
 ];

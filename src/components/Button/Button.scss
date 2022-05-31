@@ -1,19 +1,20 @@
-@import '../../styles/variables/colors.scss';
+@import '../../styles/variables/variables.scss';
 
 .search--button {
   display: flex;
-  padding: 0.5rem 0.5rem;
+  padding: $s-xs;
   width: 100%;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0);
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
-  text-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: $bs-md;
+  text-shadow: $bs-md;
   border: 2px solid $Bright;
-  border-radius: 1rem;
+  border-radius: $br-lg;
   text-align: center;
   cursor: pointer;
   font-weight: 600;
   font-family: 'roboto', sans-serif;
+  font-size: $f-xs;
   color: $Bright;
   transition: border 200ms ease-in-out, box-shadow 200ms ease-in-out, transform 200ms ease-in-out;
   line-height: 1;
@@ -23,7 +24,7 @@
     border: 2px solid $Primary;
     outline: none;
     transform: translateY(-0.05rem);
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: $bs-hover;
   }
 
   &.selected {
@@ -31,6 +32,6 @@
     color: $Bright;
     border: 2px solid $Primary;
     transform: translateY(-0.05rem);
-    box-shadow: 0px 3px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: $bs-hover;
   }
 }

@@ -1,0 +1,33 @@
+@import '../../styles/variables/variables.scss';
+
+.header {
+  background-color: $Dark;
+  padding: $s-lg;
+  display: flex;
+  color: $Bright;
+  text-transform: uppercase;
+  font-size: $f-xxs;
+  justify-content: flex-start;
+}
+
+.header--content {
+  max-width: 1024px;
+  margin: auto;
+  width: 100%;
+  padding: 0 $s-lg;
+}
+
+.headline--container {
+  cursor: pointer;
+  width: auto;
+  width: fit-content;
+  transition: outline 200ms ease-in-out;
+  outline: 1px solid $Bright;
+  padding: $s-xxs $s-xs;
+  border-radius: $br-sm;
+  text-align: center;
+
+  &:hover {
+    outline: 1px solid $Primary;
+  }
+}

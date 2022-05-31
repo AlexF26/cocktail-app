@@ -1,11 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-#root {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
 body {
   margin: 0;
   font-family: 'Roboto', serif;
@@ -13,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: linear-gradient(140deg, #eadedb 0%, #bc70a4 50%, #bfd641 75%);
   line-height: 1.2;
+  font-size: 16px;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 4rem;
 }
 
 html {

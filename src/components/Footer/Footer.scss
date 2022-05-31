@@ -1,12 +1,18 @@
-@import '../../styles/variables/colors.scss';
+@import '../../styles/variables/variables.scss';
 
 .footer {
-  padding: 1.5rem;
-  background-color: black;
+  padding: $s-xl;
+  background-color: $Dark;
   color: $Bright;
   width: 100%;
-  font-size: 0.8rem;
+  font-size: $f-sm;
   text-transform: uppercase;
   font-weight: 400;
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  height: 4rem;
 }

@@ -1,20 +1,22 @@
-@import '../styles/variables/colors.scss';
+@import '../../styles/variables/variables.scss';
 
 body {
   background-color: $Background;
 }
 
 .content--container {
-  padding: 0 2rem 2rem;
+  padding: $s-xxxl $s-xxl;
   max-width: 1024px;
   margin: auto;
   width: 100%;
+  height: auto;
+  box-sizing: border-box;
 }
 
 .hero--container {
   display: flex;
   padding: 6rem 0;
-  background-image: url('../assets/hero-image.png');
+  background-image: url('../../assets/hero-image.png');
   background-size: cover;
   background-position: 50% 0%;
 
@@ -27,13 +29,13 @@ body {
 .hero--content {
   max-width: 1024px;
   width: 100%;
-  padding: 0 2rem;
+  padding: 0 $s-xxl;
   margin: auto;
 }
 
 .content--headline {
   font-weight: 900;
-  font-size: 2rem;
+  font-size: $s-xxl;
   text-align: center;
   text-transform: uppercase;
   color: $Bright;
@@ -41,16 +43,15 @@ body {
 }
 
 .search--container {
-  margin-top: 1.75rem;
+  margin-top: $s-xxl;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 0.75rem;
+  gap: $s-sm;
   width: 100%;
 }
 
 .cards--container {
-  margin-top: 1.75rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1rem;
+  gap: $s-md;
 }
