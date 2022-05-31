@@ -17,7 +17,7 @@ function Drinkofday() {
 
   return (
     <div className="drinkofday--container">
-      <div className="dod--headline">Drink of the Day</div>
+      <div className="dod--title">Drink of the Day</div>
       <div className="dod--content">
         <img
           className="dod--image"
@@ -25,6 +25,7 @@ function Drinkofday() {
           alt={randomDrink.strDrinkThumb}
         />
         <div className="dod--information--container">
+          <h1 className="dod--headline">{randomDrink.strDrink}</h1>
           <div className="dod--info--section">
             <div class="dod--description">Ingredients</div>
             <ul class="dod--ingredient--list">
