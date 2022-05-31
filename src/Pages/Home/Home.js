@@ -3,6 +3,7 @@ import Button from '../../components/Button/Button';
 import Cards from '../../components/Cards/Cards';
 import ButtonCategories from '../../App/ButtonCategories';
 import './Home.scss';
+import Drinkofday from '../../components/Drink_of_Day/Drinkofday';
 
 function Home() {
   // set initial state for card layout from cocktail api
@@ -60,7 +61,8 @@ function Home() {
       </div>
       <div className="content--container">
         {/* Card Layout */}
-        <div className="cards--container">{cardState}</div>
+        <div className="cards--container">{cardState} </div>
+        <Drinkofday />
       </div>
     </>
   );

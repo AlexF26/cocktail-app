@@ -1,0 +1,82 @@
+@import '../../styles/variables/variables.scss';
+
+.drinkofday--container {
+  padding: $s-lg;
+  box-shadow: $bs-md;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: $s-xxxl;
+  background-color: $Accent;
+}
+
+.dod--headline {
+  font-size: $f-xl;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.dod--content {
+  display: flex;
+  flex-direction: column;
+  margin-top: $s-xxl;
+}
+
+.dod--image {
+  width: 100%;
+  border-radius: $br-md;
+  object-fit: cover;
+}
+
+.dod--information--container {
+  display: flex;
+  flex-direction: column;
+}
+
+.dod--info--section {
+  margin-top: $s-xxl;
+}
+
+.dod--description {
+  margin-top: 0;
+  font-size: $f-lg;
+  font-weight: 500;
+}
+
+.dod--instrution--paragraph {
+  margin-top: $s-xs;
+}
+
+.dod--ingredient--list {
+  margin-top: $s-xs;
+  padding-left: $s-md;
+}
+
+.dod--ingredient--list {
+  font-weight: 400;
+}
+
+.dod--ingredient--msm {
+  color: $Primary;
+  font-weight: 500;
+}
+
+@media (min-width: 600px) {
+  .dod--content {
+    flex-direction: row;
+  }
+
+  .dod--image {
+    width: 40%;
+    height: 300px;
+  }
+
+  .dod--information--container {
+    padding-left: $s-xxxl;
+    width: 60%;
+  }
+}
