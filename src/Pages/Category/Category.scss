@@ -1,0 +1,61 @@
+@import '../../styles/variables/colors.scss';
+
+.category--drink--container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.75rem;
+}
+
+.drink--image {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.information--container {
+  display: flex;
+  flex-direction: column;
+}
+
+.info--section {
+  margin-top: 1.75rem;
+}
+
+.description {
+  margin-top: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.instrution--paragraph {
+  margin-top: 0.5rem;
+}
+
+.ingredient--list {
+  margin-top: 0.5rem;
+  padding-left: 1rem;
+}
+
+.ingredient--list {
+  font-weight: 500;
+}
+
+.ingredient--msm {
+  color: $Primary;
+}
+
+@media (min-width: 480px) {
+  .category--drink--container {
+    flex-direction: row;
+  }
+
+  .drink--image {
+    width: 50%;
+    height: 350px;
+  }
+
+  .information--container {
+    padding-left: 3rem;
+    width: 50%;
+  }
+}

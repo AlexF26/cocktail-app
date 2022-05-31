@@ -1,45 +1,39 @@
 import React from 'react';
-import './App.scss';
-import Button from '../Button/Button';
-import Cards from '../Cards/Cards';
-import ButtonCategories from './ButtonCategories';
+import Button from '../../components/Button/Button';
+import Cards from '../../components/Cards/Cards';
+import ButtonCategories from '../../App/ButtonCategories';
+import '../../App/App.scss';
 
-function App() {
+function Home() {
   // set initial state for card layout from cocktail api
   const [cardState, handleCardState] = React.useState([]);
   const [buttonState, handleButtonState] = React.useState(ButtonCategories);
 
+  // card layout state init
   React.useEffect(() => {
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${ButtonCategories[0].name}`)
       .then((res) => res.json())
-      .then((data) =>
-        handleCardState(
-          data.drinks.map((data) => {
-            return <Cards data={data} key={data.idDrink} />;
-          })
-        )
-      );
+      .then((data) => handleCardState(generateAllCards(data)));
   }, []);
 
-  // runs on category button click to update button state and render new array of cards
-  function useHandleButtonFilter(id, value) {
-    // match button object id value to the one clicked to swap "on" value to true or false
+  // card generating callback
+  function generateAllCards(data) {
+    return data.drinks.map((data) => {
+      return <Cards data={data} key={data.idDrink} />;
+    });
+  }
+
+  // gereate button color state and card layout
+  function useHandleButtonClick(id, value) {
     handleButtonState(
-      ButtonCategories.map((element) => {
+      buttonState.map((element) => {
         return element.id === id ? { ...element, on: true } : { ...element, on: false };
       })
     );
 
-    // call to database with the clicked category button value
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${value}`)
       .then((res) => res.json())
-      .then((data) =>
-        handleCardState(
-          data.drinks.map((data) => {
-            return <Cards data={data} />;
-          })
-        )
-      );
+      .then((data) => handleCardState(generateAllCards(data)));
   }
 
   // loop and display all buttons
@@ -50,7 +44,7 @@ function App() {
         value={element.name}
         id={element.id}
         on={element.on}
-        useHandleButtonFilter={useHandleButtonFilter}
+        useHandleButtonClick={useHandleButtonClick}
       />
     );
   });
@@ -72,4 +66,4 @@ function App() {
   );
 }
 
-export default App;
+export default Home;

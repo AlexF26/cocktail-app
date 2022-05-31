@@ -1,0 +1,12 @@
+@import '../../styles/variables/colors.scss';
+
+.footer {
+  padding: 1.5rem;
+  background-color: black;
+  color: $Bright;
+  width: 100%;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+}

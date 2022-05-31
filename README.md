@@ -6,7 +6,6 @@
 
 This simple cocktail app is a personal project that takes my love of drinks and makes it easier for my friends and I to make a decision on what drink to make for the weekends.
 
-
 ## Features
 
 - Sort Drinks by specific types of alcohol
@@ -14,7 +13,6 @@ This simple cocktail app is a personal project that takes my love of drinks and 
 - Instructions of making drinks
   Get
 - Measurements of drink ingredients
-
 
 ## Get Started
 

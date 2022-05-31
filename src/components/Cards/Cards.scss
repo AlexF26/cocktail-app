@@ -3,9 +3,9 @@
 .card {
   display: flex;
   align-items: flex-end;
-  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.15);
+  box-shadow: 2px 3px 5px -1px rgba(0, 0, 0, 0.15);
   border-radius: 0.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.25);
   text-decoration: none;
   transition: box-shadow 200ms ease-in-out;
   overflow: hidden;
@@ -14,7 +14,8 @@
   min-height: 300px;
 
   &:hover {
-    box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 2px 4px 5px -1px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
   }
 
   &::after {
@@ -31,11 +32,12 @@
   height: 100%;
   width: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: 50% 50%;
   z-index: unset;
+  transition: transform 200ms ease-in-out;
 }
 
-.card--copy {
+.card--title--container {
   padding: 1rem;
   z-index: 3;
   width: 100%;
@@ -49,27 +51,3 @@
   color: $Bright;
   text-transform: uppercase;
 }
-
-// .list--container {
-//   margin-top: 0.5rem;
-// }
-
-// .desc--title {
-//   font-size: 0.9rem;
-//   color: $Description;
-// }
-
-// .ingredients--list {
-//   font-size: 0.9rem;
-//   margin-top: 0.5rem;
-//   list-style: disc outside;
-//   padding-left: 1rem;
-// }
-
-// .list-item {
-//   margin-top: 0.15rem;
-
-//   &:first-child {
-//     margin-top: 0;
-//   }
-// }
