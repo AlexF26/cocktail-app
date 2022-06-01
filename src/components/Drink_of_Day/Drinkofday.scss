@@ -9,7 +9,6 @@
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
-  margin-top: $s-xxxl;
   background-color: $Accent;
 }
 
@@ -31,7 +30,10 @@
 .dod--content {
   display: flex;
   flex-direction: column;
-  margin-top: $s-xxl;
+  // margin-top: $s-xxl;
+  max-width: 1024px;
+  padding: 0 $s-xxl;
+  margin: auto;
 }
 
 .dod--image {
@@ -77,7 +79,7 @@
   font-weight: 500;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 480px) {
   .dod--content {
     flex-direction: row;
   }

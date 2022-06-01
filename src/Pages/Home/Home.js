@@ -6,9 +6,10 @@ import './Home.scss';
 import Drinkofday from '../../components/Drink_of_Day/Drinkofday';
 
 function Home() {
-  // set initial state for card layout from cocktail api
+  // set initial state for card layout/button values/headline name
   const [cardState, handleCardState] = React.useState([]);
   const [buttonState, handleButtonState] = React.useState(ButtonCategories);
+  const [h2Name, seth2Name] = React.useState(ButtonCategories[0].name);
 
   // card layout state init
   React.useEffect(() => {
@@ -26,6 +27,7 @@ function Home() {
 
   // gereate button color state and card layout
   function useHandleButtonClick(id, value) {
+    seth2Name(value);
     handleButtonState(
       buttonState.map((element) => {
         return element.id === id ? { ...element, on: true } : { ...element, on: false };
@@ -59,10 +61,16 @@ function Home() {
           <div className="search--container">{buttonsDisplay}</div>
         </div>
       </div>
+
       <div className="content--container">
         {/* Card Layout */}
-        <div className="cards--container">{cardState} </div>
-        <Drinkofday />
+        <section>
+          <h2 className="section--headline">Find a drink with {h2Name}</h2>
+          <div className="cards--container">{cardState} </div>
+        </section>
+        <section>
+          <Drinkofday />
+        </section>
       </div>
     </>
   );

@@ -4,6 +4,21 @@ body {
   background-color: $Background;
 }
 
+section {
+  margin-top: $s-xxxl;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+}
+
+.section--headline {
+  font-size: $f-lg;
+  color: $section-headline;
+  margin-bottom: $s-lg;
+  text-transform: uppercase;
+}
+
 .content--container {
   padding: $s-xxxl $s-xxl;
   max-width: 1024px;
