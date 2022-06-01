@@ -25,7 +25,7 @@ function Category() {
         </div>
       </div>
       {/* drink content */}
-      <div className="content--container">
+      <div className="category--container">
         <div className="category--drink--container">
           <img className="drink--image" src={drink.strDrinkThumb} alt={drink.strDrinkThumb} />
           <div className="information--container">
