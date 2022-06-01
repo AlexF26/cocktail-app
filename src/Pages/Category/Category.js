@@ -4,16 +4,17 @@ import './Category.scss';
 
 function Category() {
   // console.log(props);
-  let { drinkId } = useParams();
+  let { id } = useParams();
   // const [drinkState, setDrinkState] = React.useState(drinkId);
   const [drink, setDrink] = React.useState('');
 
   React.useEffect(() => {
-    fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${drinkId}`)
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${id}`)
       .then((res) => res.json())
       .then((data) => {
         setDrink(data.drinks[0]);
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
