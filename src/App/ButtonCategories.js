@@ -46,11 +46,6 @@ let ButtonCategories = [
   },
   {
     id: 10,
-    name: 'Beer',
-    on: false,
-  },
-  {
-    id: 11,
     name: 'Wine',
     on: false,
   },

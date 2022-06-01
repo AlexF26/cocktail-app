@@ -1,7 +1,7 @@
 @import '../../styles/variables/variables.scss';
 
 .drinkofday--container {
-  padding: $s-lg;
+  padding: $s-xxl $s-lg;
   box-shadow: $bs-md;
   width: 100vw;
   position: relative;
@@ -30,7 +30,6 @@
 .dod--content {
   display: flex;
   flex-direction: column;
-  // margin-top: $s-xxl;
   max-width: 1024px;
   padding: 0 $s-xxl;
   margin: auto;
