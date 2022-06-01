@@ -17,7 +17,7 @@ function Drinkofday() {
 
   return (
     <div className="drinkofday--container">
-      <div className="dod--title">Drink of the Day</div>
+      <div className="dod--title">Try out a random drink</div>
       <div className="dod--content">
         <img
           className="dod--image"

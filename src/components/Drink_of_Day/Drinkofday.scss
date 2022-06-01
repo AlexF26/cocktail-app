@@ -21,10 +21,11 @@
 }
 
 .dod--headline {
-  font-size: $f-xl;
+  font-size: $f-lg;
   font-weight: 800;
   text-transform: uppercase;
   text-align: left;
+  margin-top: $s-xl;
 }
 
 .dod--content {
