@@ -18,6 +18,9 @@
 }
 
 .headline--container {
+  display: block;
+  text-decoration: none;
+  color: $Bright;
   cursor: pointer;
   width: auto;
   width: fit-content;

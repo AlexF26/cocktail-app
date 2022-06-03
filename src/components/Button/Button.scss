@@ -20,7 +20,8 @@
   line-height: 1;
 
   &:hover,
-  &:focus-visible {
+  &:focus-visible,
+  &:focus {
     border: 2px solid $Primary;
     outline: none;
     transform: translateY(-0.05rem);
