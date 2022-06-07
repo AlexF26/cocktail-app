@@ -1,0 +1,29 @@
+@import '../../styles/variables/variables.scss';
+
+.cardSkeleton {
+  display: flex;
+  align-items: flex-end;
+  box-shadow: $bs-md;
+  border-radius: $br-md;
+  background-color: $Accent;
+  height: 300px;
+  padding: $s-md;
+  opacity: 0.6;
+}
+
+.cardSkeleton--title {
+  height: 20px;
+  background-color: $Description;
+  animation: fade 0.5s alternate infinite ease-out;
+  border-radius: $br-md;
+  width: 40%;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 0.3;
+  }
+}

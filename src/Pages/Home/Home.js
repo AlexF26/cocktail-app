@@ -1,13 +1,14 @@
 import React from 'react';
+import './Home.scss';
 import Button from '../../components/Button/Button';
 import Cards from '../../components/Cards/Cards';
 import ButtonCategories from '../../components/Button/ButtonCategories';
-import './Home.scss';
 import Drinkofday from '../../components/Drink_of_Day/Drinkofday';
+import CardSkeleton from '../../components/CardSkeleton/CardSkeleton';
 
 function Home() {
   // set states
-  const [cardState, handleCardState] = React.useState([]);
+  const [cardState, handleCardState] = React.useState(null);
   const [buttonState, handleButtonState] = React.useState(ButtonCategories);
   const [buttonValue, setButtonValue] = React.useState(ButtonCategories[0].name);
 
@@ -49,6 +50,8 @@ function Home() {
     );
   });
 
+  const skeleLayout = [1, 2, 3, 4, 5, 6, 7, 8].map(() => <CardSkeleton />);
+
   return (
     <>
       <div className="hero--container">
@@ -63,7 +66,8 @@ function Home() {
         {/* Card Layout */}
         <section>
           <h2 className="section--headline">Find a drink with {buttonValue}</h2>
-          <div className="cards--container">{cardState} </div>
+          {cardState && <div className="cards--container">{cardState} </div>}
+          {!cardState && <div className="cards--container">{skeleLayout} </div>}
         </section>
         <section>
           <Drinkofday />
